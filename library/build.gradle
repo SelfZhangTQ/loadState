@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
+group='com.github.SelfZhangTQ'
 android {
     compileSdkVersion 27
 

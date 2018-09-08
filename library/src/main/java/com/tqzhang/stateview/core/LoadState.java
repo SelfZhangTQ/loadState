@@ -63,7 +63,7 @@ public class LoadState {
          * @param defaultStateView
          * @return
          */
-        public Builder setDefaultCallback(@NonNull Class<? extends BaseStateControl> defaultStateView) {
+        public Builder setDefaultStateView(@NonNull Class<? extends BaseStateControl> defaultStateView) {
             this.defaultStateView = defaultStateView;
             return this;
         }

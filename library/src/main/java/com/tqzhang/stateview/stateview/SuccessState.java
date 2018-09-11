@@ -8,6 +8,7 @@ import android.view.View;
  * @author zhangtianqiu
  */
 public class SuccessState extends BaseStateControl {
+
     public SuccessState(View view, Context context, OnRefreshListener onRefreshListener) {
         super(view, context, onRefreshListener);
     }
@@ -18,15 +19,15 @@ public class SuccessState extends BaseStateControl {
     }
 
     public void hide() {
-        obtainRootView().setVisibility(View.INVISIBLE);
+        getRootView.setVisibility(View.INVISIBLE);
     }
 
     public void show() {
-        obtainRootView().setVisibility(View.VISIBLE);
+        getRootView().setVisibility(View.VISIBLE);
     }
 
     public void showWithStateView(boolean successVisible) {
-        obtainRootView().setVisibility(successVisible ? View.VISIBLE : View.INVISIBLE);
+        getRootView().setVisibility(successVisible ? View.VISIBLE : View.INVISIBLE);
     }
 
 }

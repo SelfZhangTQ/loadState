@@ -23,6 +23,7 @@ public class LoadLayout extends FrameLayout {
     private BaseStateControl.OnRefreshListener onRefreshListener;
     private Class<? extends BaseStateControl> preStateView;
     private Class<? extends BaseStateControl> curStateView;
+
     private static final int STATEVIEW_CUSTOM_INDEX = 1;
 
     public LoadLayout(@NonNull Context context) {

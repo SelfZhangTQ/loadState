@@ -13,7 +13,9 @@ import java.util.List;
  * @author zhangtianqiu
  */
 public class LoadState {
+
     private static volatile LoadState loadState;
+
     private Builder builder;
 
     public static LoadState newInstance() {
@@ -44,7 +46,6 @@ public class LoadState {
         private List<BaseStateControl> stateViews = new ArrayList<>();
 
         private Class<? extends BaseStateControl> defaultStateView;
-
 
         /**
          * 添加不同状态页面

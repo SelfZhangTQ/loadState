@@ -15,6 +15,7 @@ import java.io.Serializable;
  */
 public abstract class BaseStateControl implements Serializable {
     private View rootView;
+
     private Context context;
     /**
      * 刷新监听
@@ -110,7 +111,7 @@ public abstract class BaseStateControl implements Serializable {
         return (BaseStateControl) obj;
     }
 
-    public View obtainRootView() {
+    public View getRootView() {
         if (rootView == null) {
             rootView = View.inflate(context, onCreateView(), null);
         }

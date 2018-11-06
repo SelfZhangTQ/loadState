@@ -21,15 +21,18 @@ public class StateViewActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_state_view);
+
         loadManager = new LoadManager.Builder()
-                .setViewParams(this)
+                .setViewParams(findViewById(R.id.rl_content))
                 .setListener(new BaseStateControl.OnRefreshListener() {
-                    @Override
-                    public void onRefresh(View v) {
-                        onStateRefresh();
-                    }
-                })
+            @Override
+            public void onRefresh(View v) {
+                onStateRefresh();
+            }
+        })
                 .build();
+
+
         loadManager.showStateView(ErrorState.class);
 
     }

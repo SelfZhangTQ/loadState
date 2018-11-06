@@ -36,9 +36,9 @@ public class LoadLayout extends FrameLayout {
         this.onRefreshListener = onRefreshListener;
     }
 
-    public void setSuccessLayout(BaseStateControl callback) {
-        addStateView(callback);
-        View successView = callback.getRootView(null);
+    public void setSuccessLayout(BaseStateControl baseStateControl) {
+        addStateView(baseStateControl);
+        View successView = baseStateControl.getRootView(null);
         successView.setVisibility(View.GONE);
         addView(successView);
         curStateView = SuccessState.class;
@@ -56,16 +56,16 @@ public class LoadLayout extends FrameLayout {
         }
     }
 
-    public void showStateView(final Class<? extends BaseStateControl> callback) {
-        showStateView(callback, null);
+    public void showStateView(final Class<? extends BaseStateControl> curStateView) {
+        showStateView(curStateView, null);
     }
 
-    public void showStateView(final Class<? extends BaseStateControl> callback, Object tag) {
-        checkStateViewExist(callback);
+    public void showStateView(final Class<? extends BaseStateControl> curStateView, Object tag) {
+        checkStateViewExist(curStateView);
         if (LoadUtil.isMainThread()) {
-            showStateViewView(callback, tag);
+            showStateViewView(curStateView, tag);
         } else {
-            postMainThread(callback, tag);
+            postMainThread(curStateView, tag);
         }
     }
 

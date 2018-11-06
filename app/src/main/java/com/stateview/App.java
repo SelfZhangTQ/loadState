@@ -16,7 +16,7 @@ public class App extends Application {
         new LoadState.Builder()
                 .register(new ErrorState())
                 .register(new LoadingState())
-                .setDefaultCallback(LoadingState.class)
+                .setDefaultStateView(LoadingState.class)
                 .build();
     }
 }

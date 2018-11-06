@@ -18,10 +18,6 @@ public class SuccessState extends BaseStateControl {
         return 0;
     }
 
-    public void hide() {
-        getRootView.setVisibility(View.INVISIBLE);
-    }
-
     public void show() {
         getRootView().setVisibility(View.VISIBLE);
     }
